@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/polls/update/{{students.id}}">
+    {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Update Details </h3>
+        </p>
+    </div>
+    <div>
+        <p>Student ID:</p>
+        <div>
+            <input type="text"  name="sid" value="{{students.sid}}">
+        </div>
+    </div>
+    <div>
+        <p>Student Name:</p>
+        <div>
+            <input type="text"  name="name" value="{{students.name}}">
+        </div>
+    </div>
+    <div>
+        <p>Student Age:</p>
+        <div>
+            <input type="text"  name="age" value="{{students.age}}">
+        </div>
+    </div>
+    <div>
+        <p>Student Class:</p>
+        <div>
+            <input type="text"  name="standard" value="{{students.standard}}">
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+    </form>
+</body>
+</html>
